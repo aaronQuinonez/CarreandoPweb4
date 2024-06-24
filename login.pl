@@ -23,7 +23,21 @@ $sth->execute($user, $password);
 
 #Si está en la base de datos
 if(my $row = $sth->fetchrow_hashref){
-    print $cgi->redirect('');   #Llenar
+    #print $cgi->redirect('');   #Llenar
+    print <<HTML;
+        <!DOCTYPE HTML>
+        <html>
+        <head>
+            <title>a</title>
+        </head>
+        <body>
+            <p>BIENVENIDO</p>
+            <form action="index.html" method="POST">
+                <input type="submit" value="Regresar">
+            </form>
+        </body>
+        </html>
+HTML
 }
 else {
     print <<HTML;
