@@ -18,7 +18,7 @@ my $dbh = DBI->connect($dsn, $username, $password) or die "No se pudo conectar a
 my $user = $cgi -> param('usuario');
 my $password = $cgi -> param('contraseña');
 
-my $sth = $dbh->prepare("SELECT * FROM usuario WHERE user = ? AND password = ?");
+my $sth = $dbh->prepare("SELECT * FROM usuario WHERE nombreUsuario = ? AND password = ?");
 $sth->execute($user, $password);
 
 #Si está en la base de datos
