@@ -107,3 +107,11 @@ body{
     text-decoration: underline;
 
 }
+.botonINFORME {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px; /* Margen opcional para separar del borde */
+    z-index: 1000;
+    text-align: right; /* Alineación del contenido a la derecha */
+}
