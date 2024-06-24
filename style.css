@@ -115,3 +115,8 @@ body{
     z-index: 1000;
     text-align: right; /* Alineación del contenido a la derecha */
 }
+.botoNVOLVER {
+    position: fixed;
+    top: 20px; /* Ajusta el valor según sea necesario */
+    right: 20px; /* Ajusta el valor según sea necesario */
+}
