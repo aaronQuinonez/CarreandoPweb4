@@ -34,7 +34,7 @@ else {
         </head>
         <body>
             <p>Usuario o contraseña incorrectos. Intente de nuevo.</p>
-            <form action="../" method="POST">
+            <form action="index.html" method="POST">
                 <input type="submit" value="Regresar">
             </form>
         </body>

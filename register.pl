@@ -22,3 +22,17 @@ my $passwd = $cgi -> param('Contraseñas');
 
 my $sth = $dbh->prepare("INSERT INTO usuario (nombre, nombreUsuario, correo, password) VALUES (?, ?, ?, ?)");
 $sth->execute($name, $user, $email, $passwd);
+print <<HTML;
+        <!DOCTYPE HTML>
+        <html>
+        <head>
+            <title>Registro completado</title>
+        </head>
+        <body>
+            <p>Usuario registrado</p>
+            <form action="index.html" method="POST">
+                <input type="submit" value="Regresar">
+            </form>
+        </body>
+        </html>
+HTML
