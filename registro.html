@@ -10,7 +10,7 @@
 <body>
     
     <div class="wrapper">
-        <form action="register.pl" method="POST">
+        <form action="register.pl" method="POST" onsubmit="return verificar();">
             <h1>Registrarte</h1>
             <div class="input-box">
 				<i class='bx bxs-user'></i>
@@ -22,7 +22,7 @@
             </div>
 			<div class="input-box">
 				<i class='bx bxl-gmail'></i>
-                <input type="text" name="Correos" placeholder="Correo electrónico" required>
+                <input type="text" name="Correos" id="email" placeholder="Correo electrónico" required>
             </div>
 			<div class="input-box">
 				<i class='bx bx-lock-alt'></i>
@@ -37,8 +37,17 @@
            
         </form>
     </div>
-   
-
-
+    <script>
+        function verificar(){
+    var correo = document.getElementById('email').value;
+    if(!correo.endsWith("@unsa.edu.pe")){
+        alert("Ingrese un correo válido");
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+    </script>
 </body>
 </html>
