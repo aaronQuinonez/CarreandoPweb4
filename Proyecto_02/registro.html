@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <form action="register.pl" method="POST">
+            <h1>Registrarte</h1>
+            <div class="input-box">
+				<i class='bx bxs-user'></i>
+                <input type="text" name="Nombres" placeholder="Nombre Completo" required>
+            </div>
+            <div class="input-box">
+				<i class='bx bxs-user'></i>
+                <input type="text" name="Usuarios" placeholder="Usuario" required>
+            </div>
+			<div class="input-box">
+				<i class='bx bxl-gmail'></i>
+                <input type="text" name="Correos" placeholder="Correo electrónico" required>
+            </div>
+			<div class="input-box">
+				<i class='bx bx-lock-alt'></i>
+                <input type="password" name="Contraseñas" placeholder="Contraseña" required>
+            </div>
+			<div class="input-box">
+				<i class='bx bx-lock-alt'></i>
+                <input type="password" name="ConfirmacionDeContraseñas" placeholder="Confirmar Contraseña" required>
+            </div>
+            <button type="submit" class="btn">Registrarse
+            </button>
+           
+        </form>
+    </div>
+   
+
+
+</body>
+</html>
