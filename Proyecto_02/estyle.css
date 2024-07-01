@@ -102,7 +102,7 @@ header{
     transform: scale(1);
 }
 .wrapper.active{
-    height: 540px;
+    height: 590px;
 }
 .wrapper .form-box{
     width: 100%;
