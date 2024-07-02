@@ -24,7 +24,7 @@ $sthadm->execute($user, $password) or die "Error al ejecutar la consulta SQL par
 if(my $rowadm = $sthadm->fetchrow_hashref){
     print "Content-type: text/html\n\n";
     print "<html><head><title>Redireccionando...</title></head><body>";
-    print "<script>window.location.href = '/PROYECTO%20FINAL%20PWEB/Proyecto_02/admin.html';</script>";
+    print "<script>window.location.href = '/PROYECTO%20FINAL%20PWEB/Proyecto_02/HTML/admin.html';</script>";
     print "</body></html>";
 }
 else{
@@ -35,7 +35,7 @@ else{
     if(my $row = $sth->fetchrow_hashref){
         print "Content-type: text/html\n\n";
         print "<html><head><title>Redireccionando...</title></head><body>";
-        print "<script>window.location.href = '/PROYECTO%20FINAL%20PWEB/Proyecto_02/usuario.html';</script>";
+        print "<script>window.location.href = '/PROYECTO%20FINAL%20PWEB/Proyecto_02/HTML/usuario.html';</script>";
         print "</body></html>";
     }
     else {
@@ -47,7 +47,7 @@ else{
             </head>
             <body>
                 <p>Usuario o contraseña incorrectos. Intente de nuevo.</p>
-                <form action="numero2.html" method="POST">
+                <form action="../HTML/numero2.html" method="POST">
                     <input type="submit" value="Regresar">
                 </form>
             </body>

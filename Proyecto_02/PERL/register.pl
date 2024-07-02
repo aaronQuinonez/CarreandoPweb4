@@ -30,7 +30,7 @@ print <<HTML;
         </head>
         <body>
             <p>Usuario registrado</p>
-            <form action="numero2.html" method="POST">
+            <form action="../HTML/numero2.html" method="POST">
                 <input type="submit" value="Regresar">
             </form>
         </body>
