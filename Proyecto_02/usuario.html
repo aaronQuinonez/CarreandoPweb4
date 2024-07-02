@@ -1,31 +1,47 @@
 <!DOCTYPE html>
+<html lang="es">
+    <style>
+        .container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+a.btn {
+    display: inline-block;
+    background-color: #17014a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 5px;
+    font-size: 16px;
+}
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIENVENIDO USUARIO</title>
+    <title>Bienvenido Usuario</title>
     <link rel="stylesheet" href="estyle.css">
 </head>
 <body>  
     <header>
-        <h2 class="logo">BIENVENIDO USUARIO</h2>
+        <h2 class="logo">Bienvenido Usuario</h2>
         <div class="profile">
             <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
             <div class="profile-info">
                 <p class="profile-name">Nombre de Usuario</p>
             </div>
-        </nav>
+        </div>
     </header>
     <div class="container">
-        <h1>Gestión de Acreditaciones Pendientes</h1>
-        <div class="file-upload">
-            <input type="file" id="fileInput">
-            <button id="uploadButton">Cargar Archivo</button>
-        </div>
-        <div class="new-task">
-            <input type="text" id="newTaskInput" placeholder="Nueva Tarea">
-            <button id="addTaskButton">Agregar Tarea</button>
-        </div>
-        <ul id="taskList"></ul>
-
-    <script src="script.js"></script>
+        <h1>¡Bienvenido al Sistema de Gestión!</h1>
+        <p>¿Que desea  hacer? :D </p>
+        <a href="solicitudDeEvaluacion.html" class="btn">Solicitar Evaluación</a>
+        <a href="solicitar_evaluacion.html" class="btn">Seguimiento</a>
+    </div>
 </body>
+</html>
