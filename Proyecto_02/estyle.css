@@ -254,6 +254,8 @@ header{
 .login-register p a:hover{
     text-decoration: underline;
 }
+
+
 .profile {
     position: absolute;
     top: 20px;
@@ -270,4 +272,42 @@ header{
     height: 50px;
     border-radius: 50%; /* Borde circular */
     margin-right: 10px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 100px auto 40px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #005792;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #005792;
+    color: white;
 }
