@@ -61,7 +61,7 @@ print <<"HTML";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historial de Contrato de Arrendamiento</title>
+    <title>Estado</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -108,7 +108,7 @@ print <<"HTML";
 </head>
 <body>
     <header>
-        <h1>Historial de Contrato de Arrendamiento</h1>
+        <h1>Estado</h1>
     </header>
     <div class="table-container">
         <table>
