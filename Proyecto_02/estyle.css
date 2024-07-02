@@ -254,3 +254,20 @@ header{
 .login-register p a:hover{
     text-decoration: underline;
 }
+.profile {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Cambiar 'right' a 'left' si se desea mover a la izquierda */
+    display: flex;
+    align-items: center;
+    background-color: #ffffff83;
+    padding: 10px;
+    border-radius: 12px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Borde circular */
+    margin-right: 10px;
+}

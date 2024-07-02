@@ -1,4 +1,31 @@
 <!DOCTYPE html>
-<body>
-    <h1>BIENVENIDO USUARIO</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIENVENIDO USUARIO</title>
+    <link rel="stylesheet" href="estyle.css">
+</head>
+<body>  
+    <header>
+        <h2 class="logo">BIENVENIDO USUARIO</h2>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="profile-info">
+                <p class="profile-name">Nombre de Usuario</p>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Gestión de Acreditaciones Pendientes</h1>
+        <div class="file-upload">
+            <input type="file" id="fileInput">
+            <button id="uploadButton">Cargar Archivo</button>
+        </div>
+        <div class="new-task">
+            <input type="text" id="newTaskInput" placeholder="Nueva Tarea">
+            <button id="addTaskButton">Agregar Tarea</button>
+        </div>
+        <ul id="taskList"></ul>
+
+    <script src="script.js"></script>
 </body>
