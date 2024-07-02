@@ -29,7 +29,7 @@ my $sth = $dbh->prepare("INSERT INTO solicitudes (institucion, direccion, contac
 $sth->execute($institution_name, $address, $contact_person, $phone, $email, $description, $initial_documents);
 
 # Definir directorio de subida
-my $upload_dir = "uploads/";
+my $upload_dir = "uploads";
 mkdir $upload_dir unless -d $upload_dir;
 
 my $filename;
@@ -40,13 +40,18 @@ if ($initial_documents) {
         exit;
     }
     $filename = $basename . $suffix;
-    my $target_file = $upload_dir . $filename;
-    open my $upload_fh, '>', $target_file or die "No se puede abrir $target_file: $!";
-    binmode $upload_fh;
+
+    my $upload_file = "$upload_dir/$filename";
+
+    # Abrir el archivo en modo binario y asegurarse de que se manejen correctamente los datos
+    open my $fh, '>:raw', $upload_file or die "No se pudo abrir el archivo '$upload_file' para escritura: $!";
+    binmode $fh;
+
+    # Leer datos del manejador de archivo y escribir al archivo de destino
     while (my $chunk = <$initial_documents>) {
-        print $upload_fh $chunk;
+        print $fh $chunk;
     }
-    close $upload_fh;
+    close $fh;
 }
 
 # Generar HTML para la tabla con los datos recibidos
