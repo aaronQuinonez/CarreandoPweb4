@@ -44,6 +44,7 @@ print <<"HTML";
                 <th>Correo</th>
                 <th>Descripción</th>
                 <th>Documento</th>
+                <th>Usuario</th>
                 <th>Estado</th>
             </tr>
         </thead>
@@ -62,6 +63,7 @@ while (my $row = $sth->fetchrow_hashref()) {
                 <td>$row->{correo}</td>
                 <td>$row->{descripcion}</td>
                 <td><a href="uploads/$row->{documento}" target="_blank">$row->{documento}</td>
+                <td>$row->{usuario}</td>
                 <td>
                     <form method="post" action="">
                         <input type="hidden" name="id" value="$row->{id}">

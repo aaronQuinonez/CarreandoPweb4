@@ -9,14 +9,12 @@ use DBI;
 my $cgi = CGI->new;
 print $cgi->header(-type => 'text/html', -charset => 'UTF-8');
 
-#Parámetros
 my $dsn = 'DBI:mysql:database=gestiondeacreditacion;host=localhost';
 my $username = 'user'; 
 my $password = '1234'; 
 
 my $dbh = DBI->connect($dsn, $username, $password) or die "No se pudo conectar a la base de datos";
 
-# Recibir los datos del formulario
 my $institution_name = $cgi->param('institution-name');
 my $address = $cgi->param('address');
 my $contact_person = $cgi->param('contact-person');
@@ -24,11 +22,11 @@ my $phone = $cgi->param('phone');
 my $email = $cgi->param('email');
 my $description = $cgi->param('description');
 my $initial_documents = $cgi->param('initial-documents');
+my $user = $cgi -> param('username');
 
-my $sth = $dbh->prepare("INSERT INTO solicitudes (institucion, direccion, contacto, telefono, correo, descripcion, documento) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$sth->execute($institution_name, $address, $contact_person, $phone, $email, $description, $initial_documents);
+my $sth = $dbh->prepare("INSERT INTO solicitudes (institucion, direccion, contacto, telefono, correo, descripcion, documento, usuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+$sth->execute($institution_name, $address, $contact_person, $phone, $email, $description, $initial_documents, $user);
 
-# Definir directorio de subida
 my $upload_dir = "uploads";
 mkdir $upload_dir unless -d $upload_dir;
 
@@ -54,7 +52,6 @@ if ($initial_documents) {
     close $fh;
 }
 
-# Generar HTML para la tabla con los datos recibidos
 print <<"HTML";
 <!DOCTYPE html>
 <html lang="es">

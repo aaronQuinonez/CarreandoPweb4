@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <style>
-        .container {
+    .container {
     padding: 20px;
     max-width: 600px;
     margin: 20px auto;
@@ -9,17 +9,21 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-a.btn {
-    display: inline-block;
-    background-color: #17014a;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 10px 5px;
-    font-size: 16px;
-}
+    }
+    a.btn {
+        display: inline-block;
+        background-color: #17014a;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 10px 5px;
+        font-size: 16px;
+    }
+    p{
+        font-size: 20px;
+        font-weight: bold;
+    }
     </style>
 <head>
     <meta charset="UTF-8">
@@ -30,17 +34,20 @@ a.btn {
     <header>
         <h2 class="logo">Bienvenido Usuario</h2>
         <div class="profile">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+            <img src="../CSS/profile.jpg" alt="Profile Picture" class="profile-picture">
             <div class="profile-info">
-                <p class="profile-name">Nombre de Usuario</p>
+                <p class="profile-name" id="usuario"></p>
+                <p><a href="numero2.html">Cerrar Sesión</a></p>
             </div>
+            <br>
         </div>
     </header>
     <div class="container">
         <h1>¡Bienvenido al Sistema de Gestión!</h1>
         <p>¿Que desea  hacer?</p>
-        <a href="solicitudDeEvaluacion.html" class="btn">Solicitar Evaluación</a>
-        <a href="../PERL/procesar_solicitud.pl" class="btn">Seguimiento</a>
+        <a href="solicitudDeEvaluacion.html" class="btn" id="solicitudEvaluacionLink">Solicitar Evaluación</a>
+        <a href="../PERL/seguimiento.pl" class="btn" id="seguimientoLink">Seguimiento</a>
     </div>
+    <script src="scriptUser.js"></script>
 </body>
 </html>

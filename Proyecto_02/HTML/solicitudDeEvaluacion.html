@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li><a href="guia_documentacion.html">Guia de Documentacion</a></li>
-                <li><a href="usuario.html">Inicio</a></li>
+                <li><a href="usuario.html">Volver</a></li>
             </ul>
         </nav>
     </header>
@@ -21,6 +21,7 @@
             <h2>Solicitud de Evaluación</h2>
             <p>Complete el siguiente formulario para iniciar el proceso de evaluación inicial.</p>
             <form action="../PERL/procesar_solicitud.pl" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="username" id="user">
                 <div class="form-group">
                     <label for="institution-name">Nombre de la Institución</label>
                     <input type="text" id="institution-name" name="institution-name" required>
@@ -59,4 +60,9 @@
     <footer>
         <p>&copy; 2024 Sistema de Acreditación Internacional. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        document.getElementById('user').value = username;
+    </script>
 </body>

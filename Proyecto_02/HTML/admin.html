@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
     <style>
         .container {
             padding: 20px;
@@ -21,6 +20,10 @@
             margin: 10px 5px;
             font-size: 16px;
         }
+        p{
+            font-size: 20px;
+            font-weight: bold;
+        }
     </style>
 <head>
     <meta charset="UTF-8">
@@ -31,9 +34,10 @@
     <header>
         <h2 class="logo">Bienvenido Administrador</h2>
         <div class="profile">
-            <img src="../CSS/profile.jpg" alt="Profile Picture" class="profile-picture">
+            <img src="../CSS/administrador.png" alt="Profile Picture" class="profile-picture">
             <div class="profile-info">
-                <p class="profile-name">Nombre de Administrador</p>
+                <p class="profile-name" id="usuario"></p>
+                <p><a href="numero2.html">Cerrar Sesión</a></p>
             </div>
         </div>
     </header>
@@ -41,4 +45,5 @@
         <h1>¡Bienvenido al Sistema de Gestión!</h1>
         <a href="../PERL/evaluacion.pl" class="btn">Evaluar solicitudes</a>
     </div>
+    <script src="scriptUser.js"></script>
 </body>
