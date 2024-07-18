@@ -15,7 +15,7 @@ my $dbh = DBI->connect($dsn, $username, $password) or die "No se pudo conectar a
 
 print $cgi->header(-type => 'text/html', -charset => 'UTF-8');
 
-my $user = $cgi ->param('username');
+my $user = $cgi->param('username');
 
 my $sth = $dbh->prepare("SELECT * FROM solicitudes WHERE usuario=?");
 $sth->execute($user);
@@ -28,52 +28,87 @@ print <<"HTML";
     <title>Estado</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background: url('../CSS/fondo3.png') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             box-sizing: border-box;
         }
+
         header {
-            background-color: #0174DF;
+            background-color: #005792;
             color: white;
-            padding: 1rem;
+            padding: 10px; /* Reduce the padding to make the header thinner */
             text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
         }
+
         .table-container {
-            margin: 2rem auto;
-            width: 90%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            margin: 120px auto 20px auto;
             overflow-x: auto;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
         }
+
         th, td {
-            padding: 0.75rem;
+            padding: 12px;
             text-align: left;
             border: 1px solid #ddd;
         }
+
         th {
             background-color: #f2f2f2;
+            font-weight: 600;
         }
-        .icon {
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            background-size: contain;
-            vertical-align: middle;
-        }
-        .validated {
-            color: green;
+
+        a {
+            color: #005792;
+            text-decoration: none;
             font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #005792;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .back-link:hover {
+            background-color: #0174DF;
         }
     </style>
 </head>
 <body>
     <header>
-        <li><a href="../HTML/usuario.html?username=$user">Volver</a></li>
-        <h1>Estado</h1>
+        <h1>ESTADO</h1>
     </header>
     <div class="table-container">
         <table>
@@ -91,6 +126,7 @@ print <<"HTML";
             </thead>
             <tbody>
 HTML
+
 while (my $row = $sth->fetchrow_hashref) {
     my $institution_name = $row->{institucion};
     my $address = $row->{direccion};
@@ -118,6 +154,7 @@ HTML
 print <<"HTML";
             </tbody>
         </table>
+        <a href="../HTML/usuario.html?username=$user" class="back-link">Volver</a>
     </div>
 </body>
 </html>

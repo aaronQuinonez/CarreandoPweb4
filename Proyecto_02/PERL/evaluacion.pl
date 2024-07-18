@@ -116,7 +116,6 @@ print <<"HTML";
         <h1>LISTA DE SOLICITUDES</h1>
     </header>
     <div class="table-container">
-        <a href="../HTML/admin.html?username=$user" class="back-link">Volver</a>
         <table>
             <thead>
                 <tr>
@@ -185,6 +184,7 @@ if ($cgi->param('id') && $cgi->param('nuevo_estado')) {
 print <<"HTML";
             </tbody>
         </table>
+        <a href="../HTML/admin.html?username=$user" class="back-link">Volver</a>
     </div>
 </body>
 </html>
