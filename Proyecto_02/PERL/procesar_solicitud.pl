@@ -71,11 +71,11 @@ print <<"HTML";
             min-height: 100vh;
             box-sizing: border-box;
         }
-
+        
         header {
             background-color: #005792;
             color: white;
-            padding: 20px;
+            padding: 10px; /* Reduce the padding to make the header thinner */
             text-align: center;
             width: 100%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -140,7 +140,7 @@ print <<"HTML";
 </head>
 <body>
     <header>
-        <h1>Estado</h1>
+        <h1>ESTADO</h1>
     </header>
     <div class="table-container">
         <table>
