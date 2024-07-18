@@ -27,6 +27,8 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    background-color: rgb(50, 96, 135); /* Color de fondo: rojo 50, verde 96, azul 135 */
+
 }
 
 .logo {
