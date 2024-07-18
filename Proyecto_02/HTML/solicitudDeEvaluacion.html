@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li><a href="guia_documentacion.html">Guia de Documentacion</a></li>
-                <li><a href="usuario.html">Volver</a></li>
+                <li><a href="usuario.html" id="userLink">Volver</a></li>
             </ul>
         </nav>
     </header>
@@ -64,5 +64,8 @@
         const urlParams = new URLSearchParams(window.location.search);
         const username = urlParams.get('username');
         document.getElementById('user').value = username;
+
+        const userLink = document.getElementById('userLink');
+        userLink.href = `usuario.html?username=${username}`;
     </script>
 </body>
