@@ -72,6 +72,7 @@ print <<"HTML";
 </head>
 <body>
     <header>
+        <li><a href="usuario.html" id="userLink">Volver</a></li>
         <h1>Estado</h1>
     </header>
     <div class="table-container">
@@ -98,7 +99,7 @@ while (my $row = $sth->fetchrow_hashref) {
     my $email = $row->{correo};
     my $description = $row->{descripcion};
     my $document = $row->{documento};
-    my $estado = $row->{estado};  # Asegúrate de que tienes un campo "estado" en la base de datos
+    my $estado = $row->{estado};
 
     print <<"HTML";
                 <tr>
@@ -118,6 +119,12 @@ print <<"HTML";
             </tbody>
         </table>
     </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        const userLink = document.getElementById('userLink');
+        userLink.href = `usuario.html?username=${username}`;
+    </script>
 </body>
 </html>
 HTML
