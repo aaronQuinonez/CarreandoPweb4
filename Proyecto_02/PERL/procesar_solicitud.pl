@@ -58,20 +58,20 @@ print <<"HTML";
 <head>
     <meta charset="UTF-8">
     <title>Estado</title>
-    <link rel="stylesheet" href="../CSS/solicitud.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: url('fondo3.png') no-repeat;
+            background: url('../CSS/fondo3.png') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            box-sizing: border-box;
         }
+
         header {
             background-color: #005792;
             color: white;
@@ -79,36 +79,47 @@ print <<"HTML";
             text-align: center;
             width: 100%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
         }
+
         .table-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 90%;
-            margin: 20px auto;
+            margin: 120px auto 20px auto;
+            overflow-x: auto;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
+
         th, td {
             padding: 12px;
             text-align: left;
             border: 1px solid #ddd;
         }
+
         th {
             background-color: #f2f2f2;
+            font-weight: 600;
         }
+
         a {
             color: #005792;
             text-decoration: none;
             font-weight: bold;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .back-link {
             display: inline-block;
             padding: 10px 20px;
@@ -119,7 +130,9 @@ print <<"HTML";
             text-decoration: none;
             font-weight: 500;
             transition: background-color 0.3s;
+            margin-top: 20px;
         }
+
         .back-link:hover {
             background-color: #0174DF;
         }
@@ -127,7 +140,7 @@ print <<"HTML";
 </head>
 <body>
     <header>
-        <h1>ESTADO</h1>
+        <h1>Estado</h1>
     </header>
     <div class="table-container">
         <table>
