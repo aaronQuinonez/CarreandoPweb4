@@ -72,7 +72,7 @@ print <<"HTML";
 </head>
 <body>
     <header>
-        <li><a href="usuario.html" id="userLink">Volver</a></li>
+        <li><a href="../HTML/usuario.html?username=$user">Volver</a></li>
         <h1>Estado</h1>
     </header>
     <div class="table-container">
@@ -119,12 +119,6 @@ print <<"HTML";
             </tbody>
         </table>
     </div>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const username = urlParams.get('username');
-        const userLink = document.getElementById('userLink');
-        userLink.href = `usuario.html?username=${username}`;
-    </script>
 </body>
 </html>
 HTML

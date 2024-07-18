@@ -21,6 +21,8 @@ my $sql = "SELECT * FROM solicitudes";
 my $sth = $dbh->prepare($sql);
 $sth->execute();
 
+my $user = $cgi->param('username');
+
 print "Content-Type: text/html\n\n";
 
 print <<"HTML";
@@ -32,6 +34,7 @@ print <<"HTML";
     <link rel="stylesheet" href="../CSS/evaluacion.css">
 </head>
 <body>
+    <li><a href="../HTML/admin.html?username=$user">Volver</a></li>
     <h1>Lista de Solicitudes</h1>
     <table>
         <thead>

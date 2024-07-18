@@ -39,50 +39,18 @@ else{
     }
     else {
         print <<HTML;
-        <!DOCTYPE html>
-<html lang="es">
-    <style>
-    .container {
-    padding: 20px;
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    }
-    a.btn {
-        display: inline-block;
-        background-color: #17014a;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        margin: 10px 5px;
-        font-size: 16px;
-    }
-    p{
-        font-size: 20px;
-        font-weight: bold;
-    }
-    </style>
-<head>
-    <meta charset="UTF-8">
-    <title>Error de Autenticacion</title>
-    <link rel="stylesheet" href="../CSS/estyle.css">
-</head>
-<body>  
-    <header>
-        <h2 class="logo">Error de Autenticacion</h2>
-    </header>
-    <div class="container">
-        <h1>Usuario o contraseña incorrectos.</h1><br>
-        <h1>Intente de nuevo.</h1>
-        <a href="../HTML/numero2.html" class="btn" id="Regreso">Regresar</a>
-    </div>
-    <script src="scriptUser.js"></script>
-</body>
-</html>
+            <!DOCTYPE HTML>
+            <html>
+            <head>
+                <title>Error de autenticación</title>
+            </head>
+            <body>
+                <p>Usuario o contraseña incorrectos. Intente de nuevo.</p>
+                <form action="../HTML/numero2.html" method="POST">
+                    <input type="submit" value="Regresar">
+                </form>
+            </body>
+            </html>
 HTML
     }
 }
